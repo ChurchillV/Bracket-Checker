@@ -32,8 +32,9 @@ function completesBracket(openBracket, closeBracket) {
 }
 
 function lint(input) {
-    const bracketStack = [];
+    let bracketStack = [];
     for(let i = 0; i < input.length; i++) {
+        console.table(bracketStack);
         if(isOpeningBracket(input[i])) {
             bracketStack.unshift({
                 bracket : input[i],
@@ -42,21 +43,27 @@ function lint(input) {
         }
 
         if(isClosingBracket(input[i])) {
-            if(bracketStack.length && completesBracket(bracketStack[0], input[i])) {
+            if(bracketStack.length > 0 && completesBracket(bracketStack[0].bracket, input[i])) {
                 console.log("bracket closed");
-                bracketStack.shift()
-            } else if(bracketStack.length && !completesBracket(bracketStack[0], input[i])) {
-                return `Unclosed Bracket \`${bracketStack[0].bracket}\` at postion \"${bracketStack[0].position}\" `;
-            } else {
-                return `Error: Closing bracket \"${input[i]}\" at postion \"${i}\" with no opening bracket`;
+                bracketStack.shift();
+                continue;
+            }
+            
+            else if(bracketStack.length > 0 && !completesBracket(bracketStack[0].bracket, input[i])) {
+                console.log(i);
+                console.table(bracketStack);
+                return `Unclosed Bracket \`${bracketStack[0].bracket}\` at position \"${bracketStack[0].position}\" `;
+            }
+
+            return `Error: Closing bracket \"${input[i]}\" at position \"${i}\" with no opening bracket`;
             }
         }
-    }
-    if(bracketStack.length > 0) {
-        console.log("Error : Bracket left unclosed");
-    } else {
-        console.log("Everything's okay");
-    }
-}
 
-console.log(lint("]{ var x : [contu}]"));
+        if(bracketStack.length > 0) {
+            return `Error : Bracket "${bracketStack[0].bracket}" at position "${bracketStack[0].position}" left unclosed`;
+        } else {
+            console.log("Everything's okay");
+        }
+    }
+
+console.log(lint("{} var x : [contu]{}{}"));
