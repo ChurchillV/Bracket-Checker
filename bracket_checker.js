@@ -109,4 +109,5 @@ class BracketChecker {
     }
 }
 
-console.log(BracketChecker.checkBrackets("]{} var x : [contu]{}{}"));
+// console.log(BracketChecker.checkBrackets("]{} var x : [contu]{}{}"));
+module.exports = { BracketChecker };

@@ -1,0 +1,16 @@
+{
+  "name": "bracker_checker",
+  "version": "1.0.0",
+  "description": "* ### Main - Base Algorithm  \r     *Requirements:*\r     * Must have node installed to test algorithm in the command line.  \r     Install [here](https://nodejs.org/en/download)",
+  "main": "main.js",
+  "type" : "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tesseract.js": "^5.0.5"
+  }
+}
