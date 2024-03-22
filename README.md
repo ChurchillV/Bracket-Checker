@@ -1,7 +1,7 @@
 # BRACKET CHECKER PROJECT - DSA GROUP 10
 
 ## Current branches:
-* ### Main - Base Algorithm  
+* ### main - Base Algorithm  
     *Requirements:*
     * Must have node installed to test algorithm in the command line.  
     Install [here](https://nodejs.org/en/download)  
