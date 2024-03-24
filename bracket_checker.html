@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balanced Parentheses</title>
-    <link rel="stylesheet" href="balancedParentheses.css">
     <!-- Installed the bootstrap library to prevent lag if the network is bad -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="bracket_checker.css">
 </head>
 <body>
     <header class="text-center bg-primary pb-2 pt-2" ><h2>DSA GROUP 10</h2></header>
     <h3 class="short_text text-center mt-3" style="margin-bottom: 20px; font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:xx-large;">Bracket Checker</h3>
-
-    <div id="contentContainer" class="m-5">
+    
+    <button id="runButton" class="btn btn-primary btn-sm float-end m-4" onclick="runLog()">RUN</button>
+    
+    <div id="contentContainer" class="ms-5 me-5 mb-0 mt-5">
         <div id="nonEditableContent">
             <!-- Non-editable content goes here -->
                 <span>1</span>
@@ -21,12 +23,18 @@
         </div>
         <div id="editableContent" contenteditable="true">
             <!-- Editable content starts here -->
+
             <span class="non-selectable" style="display: inline-flex;">
                 <span id="errorMessages" class="text-danger ms-4" style="display: none; font-style: oblique; float: right; " contenteditable="false"></span>
-        </span>
+            </span>
         </div>
 
     </div>
+    <div id="runLog" contenteditable="false"></div>
 </body>
-<script src="bracket_checker1.js"></script>
+<!-- <script type="module" src="brb.js"></script> -->
+<script src="bracket_checker.js"></script>
+<script>
+    
+</script>
 </html>

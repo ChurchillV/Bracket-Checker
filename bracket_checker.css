@@ -12,12 +12,6 @@
     align-items: center;
 }
 
-.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -26,6 +20,7 @@ body {
 
 #contentContainer {
     display: flex;
+    min-height: auto;
 }
 
 #nonEditableContent {
@@ -36,8 +31,16 @@ body {
 #editableContent {
     padding: 10px;
     border: 2px solid black;
-    /* min-height: 50px; */
-    flex-grow: 1; 
+    /* scroll-behavior: smooth; */
+    flex-grow: 1;
+}
+
+#runLog {
+    display: none;
+    /* min-height: auto; */
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid black;
 }
 
 
