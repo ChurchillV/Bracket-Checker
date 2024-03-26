@@ -21,12 +21,13 @@ class BracketChecker {
    * @date 3/26/2024 - 2:44:38 AM
    *
    * @static
-   * @type {{ '(': string; '{': string; '[': string; }}
+   * @type {{ '(': string, '{': string, '[': string, '<': string }}
    */
   static opening = {
     '(': ')',
     '{': '}',
     '[': ']',
+    '<': '>',
   }
 
 
@@ -35,12 +36,13 @@ class BracketChecker {
    * @date 3/26/2024 - 2:46:37 AM
    *
    * @static
-   * @type {{}}
+   * @type {{ ')': string, '}': string, ']': string, '>': string }}
    */
   static closing = {
     ')': '(',
     '}': '{',
     ']': '[',
+    '>': '<',
   }
 
 
@@ -85,7 +87,7 @@ class BracketChecker {
    * @param {string} str
    * @returns {{char: string, type: 'closing' | 'opening', index: number}}
    */
-  static findBracketErrorIndex(str) {
+  static findBracketError(str) {
     const stack = [];
     for (let i = 0; i < str.length; i++) {
       const char = str[i];
@@ -95,15 +97,22 @@ class BracketChecker {
         stack.push({ char, type: 'opening', index: i });
       } else if (this.closing[char]) {
         // if it is a closing bracket,
-        // compare it to the top item of the stack
+        // compare it to the top item of the stack.
         const top = stack.pop();
-        if (this.closing[char] !== top.char) {
-          // if they don't match, then
+        if (this.closing[char] !== top?.char) {
+          if (top?.char) {
+            // if the top of the stack is available,
+            // it means a nested bracket is not closed
+            // so return it as the error.
+            return top;
+          }
+          // otherwise the error is a closing bracket without
+          // an opening bracket.
           return { char, type: 'closing', index: i };
         }
       }
     }
-    return stack.length === 0 ? stack[0] : undefined;
+    return stack.length === 0 ? undefined : stack[0];
   }
 }
 
