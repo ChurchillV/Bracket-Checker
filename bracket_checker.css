@@ -5,6 +5,11 @@
     -ms-user-select: none; 
     user-select: none; 
 }
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 .head {
     display: flex;
@@ -16,11 +21,17 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between; /* Adjusts vertical spacing */
+    /* align-items: center; */
 }
 
 #contentContainer {
     display: flex;
     min-height: auto;
+    flex: 1;
 }
 
 #nonEditableContent {
@@ -30,7 +41,7 @@ body {
 
 #editableContent {
     padding: 10px;
-    border: 2px solid black;
+    border: 2px solid #F4991A;
     /* scroll-behavior: smooth; */
     flex-grow: 1;
 }
@@ -40,7 +51,21 @@ body {
     /* min-height: auto; */
     flex-grow: 1;
     padding: 10px;
-    border: 2px solid black;
+    border: 2px solid #F4991A;
 }
 
+.unclosed-bracket {
+    /* border-bottom: 2px solid red; Red underline */
+    text-decoration: underline;
+}
 
+footer {
+    height: 200px;
+}
+
+.roboto-mono-title p , h2, h3, button, #editableContent{
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500px;
+    font-style: normal;
+  }
