@@ -53,7 +53,7 @@ html, body {
 /* .container-fluid .typewriter { */
     /*overflow: hidden; Ensures the text is not visible outside the box 
     border-right: 0.15em solid orange;  Creates the typewriter cursor effect 
-    white-space: nowrap; Ensures the text is not wrapped 
+    white-space: nowrap; Ensures the text is not wrapped *
     margin: 0 auto; Centers the text */
     /* letter-spacing: 0.15em;
     animation: typing 4s steps(30, end), blink-caret 1s step-end infinite;
