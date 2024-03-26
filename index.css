@@ -1,0 +1,70 @@
+.roboto-mono-title p {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500px;
+    font-style: normal;
+  }
+
+  .roboto-mono-title h5 {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500px;
+    font-style: normal;
+  }
+  
+.roboto-mono-title header, span, h1 {
+font-family: "Roboto Mono", monospace;
+font-optical-sizing: auto;
+font-weight: 1000px;
+font-style: normal;
+}
+
+html, body {
+    height: 100%;
+}
+.container-fluid{
+    height: 80%;
+}
+
+.container-fluid h1 {
+    font-size: 90px;
+}
+
+.container-fluid h5 {
+    font-size: 30px;
+}
+
+.btn.btn-lg {
+    background-color: #F4991A;
+    border: none;
+    width: 200px;
+    /*height: 50px;
+    padding: 30px; */
+    text-align: center;
+    padding: 15px;
+    border-radius: 40px;
+}
+
+.btn.btn-lg:hover {
+    background-color: #f5b21a;
+    font-weight: bold;
+}
+
+/* .container-fluid .typewriter { */
+    /*overflow: hidden; Ensures the text is not visible outside the box 
+    border-right: 0.15em solid orange;  Creates the typewriter cursor effect 
+    white-space: nowrap; Ensures the text is not wrapped 
+    margin: 0 auto; Centers the text */
+    /* letter-spacing: 0.15em;
+    animation: typing 4s steps(30, end), blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+  }
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+} */
