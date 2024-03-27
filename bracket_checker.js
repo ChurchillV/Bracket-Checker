@@ -114,7 +114,7 @@ class BracketChecker {
   }
 }
 
-// console.log(BracketChecker.checkBrackets("[[]]{} var x : [contu]{[}{}"));//Could be commented to prevent the output when running on the web
+console.log(BracketChecker.checkBrackets("[[]]{} var x : [contu]{[}{}"));//Could be commented to prevent the output when running on the web
 
 //Essien's Work for the response of the class
 //'start' to 'end' should be commented if running on the terminal
