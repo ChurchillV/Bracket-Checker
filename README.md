@@ -16,6 +16,18 @@
 
 * ### Essien - UI and Alternative Algorithms
 
+* ### Hassan - Detailed Algorithms with Unit Testing
+    *Requirements*
+    * Must have mocha installed
+    ```bash
+        npm install mocha
+    ```
+
+    *Setup*
+    1. pull `Hassan's` branch
+    2. cd into the test
+    2. Run `npx mocha .test.js` to use the locally installed mocha in your directory
+    
 * ### testing-ocr - Testing image to text with `Tessaract.js`  
     *Requirements:*
     * Must have node installed to test algorithm command line.  
