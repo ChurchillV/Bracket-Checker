@@ -35,7 +35,9 @@ html, body {
 }
 
 .btn.btn-lg {
-    background-color: #F4991A;
+    /* background-color: #F4991A; */
+    background-color: #196BDE;
+    color: white;
     border: none;
     width: 200px;
     /*height: 50px;
@@ -46,7 +48,9 @@ html, body {
 }
 
 .btn.btn-lg:hover {
-    background-color: #f5b21a;
+    /* background-color: #f5b21a; */
+    background-color: #0c53b7;
+    color: white;
     font-weight: bold;
 }
 
