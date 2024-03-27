@@ -16,20 +16,19 @@
 
 * ### Essien - UI and Alternative Algorithms
 
-* ### testing-ocr - Testing image to text with `Tessaract.js`
-    *Requirements:*
-    * Must have node installed to test algorithm command line.
-    Install [here](https://nodejs.org/en/download)
+* ### Hassan - Detailed Algorithms with Unit Testing
+    *Requirements*
+    * Must have mocha installed
+    ```bash
+        npm install mocha
+    ```
 
-    *Setup:*
-    1.  Run `npm install` to install all necessary packages
+    *Setup*
+    1. pull `Hassan's` branch
+    2. cd into the test
+    2. Run `npx mocha .test.js` to use the locally installed mocha in your directory
 
-
-    *Instructions for running:*
-    1. Open the project folder in the terminal.
-
-    2. Type `npm start` to see the result.
-* ### To run the tests with `mocha`
+<!-- * ### To run the tests with `mocha`
     1. Move to any of the `tests` directories.
         - `cd tests`
-    2. Run `mocha *.test.js`
+    2. Run `mocha *.test.js` -->
